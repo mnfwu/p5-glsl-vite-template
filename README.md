@@ -1,5 +1,5 @@
-# p5-vite-template
-A barebones starter for p5.js that utilizes Vite for quick reloads and a better overall p5 experience.
+# p5 and vite with glsl shaders
+A barebones starter for p5.js set up with glsl shaders and vite. 
 
 After cloning or downloading run
 `npm i`
