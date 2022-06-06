@@ -1,7 +1,19 @@
+let myShader;
+
+function preload() {
+  myShader = loadShader("./shaders/vert.glsl", "./shaders/frag.glsl");
+}
+
 function setup() {
-  createCanvas(window.innerWidth, window.innerHeight);
+  createCanvas(1080, 1920, WEBGL);
+  noStroke();
 }
 
 function draw() {
-  background(0);
+  shader(myShader);
+
+  myShader.setUniform("uResolution", [width, height]);
+  myShader.setUniform("uTime", frameCount * 0.015);
+
+  rect(0, 0, width, height);
 }
